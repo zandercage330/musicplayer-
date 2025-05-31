@@ -1,0 +1,124 @@
+# Musify - Flutter Music Player App PRD
+
+## 1. Introduction
+   - Project Name: Musify
+   - Project Goal: To create a mobile music player application for Android and iOS using Flutter, allowing users to play music stored on their local device.
+   - Target Audience: General music listeners who want to play their local music library.
+   - Core Technology: Flutter, Dart, just_audio package for audio playback, and any necessary packages for local file access and metadata extraction.
+
+## 2. Overall Design & UI
+   - Primary Design Source: Figma
+     - File Key: Y05PhbAu4xfccCAK3ePSIX
+     - File Name: Musify - Mobile music app
+     - Link: [https://www.figma.com/design/Y05PhbAu4xfccCAK3ePSIX/Musify---Mobile-music-app--Community-?node-id=0-1&m=dev](https://www.figma.com/design/Y05PhbAu4xfccCAK3ePSIX/Musify---Mobile-music-app--Community-?node-id=0-1&m=dev)
+   - Key Screens (Identified from Figma & Discussion):
+     - Home Screen
+     - Now Playing Screen
+     - Search Screen (Placeholder for MVP)
+     - Favorites Screen (Placeholder for MVP)
+     - Profile Screen (Placeholder for MVP)
+     - Music Library / Local Files Browser
+   - Text Styles: As defined in the provided `text style.txt` and referenced from Figma (Font: Oxygen).
+   - Visual Assets: Icons for navigation, playback controls, notifications, likes, etc., to be extracted from the Figma design or implemented as per design specifications.
+
+## 3. Core Features (MVP - Minimum Viable Product)
+
+   ### 3.1 Application Setup & Permissions
+     - Request necessary permissions to access local device storage for music files.
+     - Handle cases where permissions are denied gracefully.
+
+   ### 3.2 Music Library & Browsing
+     - Scan and list all playable audio files (e.g., MP3, M4A, FLAC - to be confirmed by `just_audio` capabilities) found on the user's local device.
+     - Display tracks in a scrollable list, showing at least track title and artist (if available from metadata).
+     - Allow tapping a song to start playback and navigate to the "Now Playing" screen.
+     - Basic sorting options (e.g., by title, artist) if feasible for MVP.
+
+   ### 3.3 Home Screen
+     - Display "Musify" branding (logo from Figma).
+     - Notification icon (placeholder, no backend functionality in MVP).
+     - "Recently Played" section:
+       - Horizontally scrollable.
+       - Display up to X items (e.g., 5-10) with cover art (from metadata or default) and title.
+       - Items populated based on user's playback history (persisted locally).
+       - Tapping an item initiates playback of that track/album/playlist (playlist functionality for future).
+     - "New Release" section (For MVP, this might feature a prominent track from the local library or be a static placeholder if actual "new release" logic is complex):
+       - Display one featured item with cover art, title, artist, album.
+       - Functional play button (initiates playback).
+       - Functional like button (visual toggle only for MVP, full favorite system for future).
+     - "Your Favorite Artists" section (For MVP, this might be a placeholder or show artists from recently played):
+       - Horizontally scrollable.
+       - Display up to Y circular artist images (from metadata or default) and names.
+       - Tapping an artist might navigate to a filtered list of their songs (if feasible for MVP).
+     - Bottom Navigation Bar (Functional for navigation):
+       - Home (default active tab, displays Home Screen content).
+       - Search (navigates to a placeholder Search Screen).
+       - Favorite (navigates to a placeholder Favorites Screen).
+       - Profile (navigates to a placeholder Profile Screen).
+
+   ### 3.4 Music Playback Core (using `just_audio`)
+     - Load and play audio tracks from the user's local device storage.
+     - Extract and display embedded metadata (title, artist, album, duration, cover art). Use default placeholder art if no embedded art is found.
+     - Core playback controls: Play, Pause.
+     - Track navigation: Skip to Next, Skip to Previous (within the current play queue, e.g., current album or all songs list).
+     - Background playback: Continue playing when the app is in the background or the screen is locked.
+     - Audio session management: Handle interruptions (e.g., phone calls) gracefully.
+     - Media Notifications: Display playback controls and track information in the system notification shade and on the lock screen.
+
+   ### 3.5 Now Playing Screen (MVP)
+     - Navigation:
+       - "Chevron down" icon to navigate back to the previous screen (e.g., Home or Library) or minimize to a mini-player (mini-player is a future enhancement).
+       - "More options" (kebab menu) icon:
+         - Action: "View Track Details".
+         - Functionality: Opens a dialog/bottom sheet displaying additional available metadata for the current track (e.g., file path, size, format, bitrate, genre, year).
+     - Display prominent cover art for the current track.
+     - Display current track's title and artist.
+     - Playback Controls (functional):
+       - Play/Pause button (reflecting current state).
+       - Next track button.
+       - Previous track button.
+     - Progress/Seek Bar:
+       - Visually display current playback position and track duration.
+       - Allow user to drag the seek bar to change playback position.
+       - Display current time and total duration numerically (e.g., 01:23 / 04:56).
+     - Shuffle Toggle Button:
+       - Toggles shuffle mode for the current play queue.
+       - Visual state of the button should reflect shuffle status.
+       - Shuffle state should persist for the current session.
+     - Repeat Toggle Button:
+       - Cycles through repeat modes: Off, Repeat All (queue), Repeat One (current track).
+       - Visual state of the button should reflect repeat status.
+       - Repeat state should persist for the current session.
+     - Lyrics Section: (Deferred to Post-MVP)
+
+## 4. Non-Functional Requirements (MVP)
+   - Performance: Smooth UI animations and transitions. Responsive playback controls. Efficient loading of local music library.
+   - Stability: App should handle common scenarios without crashing (e.g., no music files found, corrupted files - graceful error handling by `just_audio`).
+   - Usability: Intuitive navigation and clear visual feedback for user actions.
+
+## 5. Future Enhancements (Post-MVP)
+   - Full Search functionality (local library: by title, artist, album).
+   - Favorites system (mark songs, artists, albums as favorites, accessible from Favorites screen).
+   - Playlist creation and management.
+   - User Profile customization.
+   - Mini-player for persistent playback control while browsing other app sections.
+   - Advanced audio features: Equalizer, crossfade, gapless playback (if not default with `just_audio`).
+   - Loading and displaying synchronized lyrics (e.g., from .lrc files).
+   - More detailed "More Options" menu on Now Playing screen (e.g., Add to playlist, Go to album/artist, Share, Delete from device).
+   - Tablet layout support.
+   - Customizable themes.
+   - Online streaming service integration (optional, major feature).
+   - Chromecast or other casting support.
+
+## 6. Tech Stack Summary
+   - Frontend: Flutter, Dart
+   - Audio Playback: `just_audio` package
+   - State Management: (To be decided - e.g., Provider, BLoC, Riverpod)
+   - Local File Access: `path_provider`, `file_picker` or similar.
+   - Permissions: `permission_handler` or similar.
+   - Local Data Persistence (for recently played, settings): `shared_preferences` or a simple local DB like `sqflite`.
+
+## 7. Open Questions / To Be Decided (TBD)
+   - Specific state management solution.
+   - Detailed error handling strategy for file I/O and playback issues.
+   - Exact list of audio formats to support (confirm with `just_audio` documentation and test).
+ 

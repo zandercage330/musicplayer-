@@ -1,0 +1,202 @@
+Text(
+    'Your Favorite artists',
+    style: TextStyle(
+        color: const Color(0xFFEAEAEA),
+        fontSize: 24,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w700,
+        height: 1.50,
+    ),
+)
+// ---
+Text(
+    'Artist name with max line of three',
+    textAlign: TextAlign.center,
+    style: TextStyle(
+        color: Colors.white,
+        fontSize: 12,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w700,
+        height: 1.15,
+    ),
+)
+// ---
+Text(
+    'Artist name with max line of three',
+    textAlign: TextAlign.center,
+    style: TextStyle(
+        color: Colors.white,
+        fontSize: 12,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w700,
+        height: 1.15,
+    ),
+)
+// ---
+Text(
+    'Artist name with max line of three',
+    textAlign: TextAlign.center,
+    style: TextStyle(
+        color: Colors.white,
+        fontSize: 12,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w700,
+        height: 1.15,
+    ),
+)
+// ---
+Text(
+    'New Release',
+    style: TextStyle(
+        color: const Color(0xFFEAEAEA),
+        fontSize: 24,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w700,
+        height: 1.50,
+    ),
+)
+// ---
+Text(
+    'I dont miss you ',
+    style: TextStyle(
+        color: const Color(0xFFFAFAFA),
+        fontSize: 16,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w700,
+        height: 1.15,
+    ),
+)
+// ---
+Text(
+    'Last of us',
+    style: TextStyle(
+        color: Colors.white,
+        fontSize: 12,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w400,
+        height: 1.15,
+    ),
+)
+// ---
+Text(
+    'Album',
+    style: TextStyle(
+        color: Colors.white,
+        fontSize: 12,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w400,
+        height: 1.15,
+    ),
+)
+// ---
+Text(
+    'Recenly Played',
+    style: TextStyle(
+        color: const Color(0xFFEAEAEA),
+        fontSize: 24,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w700,
+        height: 1.50,
+    ),
+)
+// ---
+Text(
+    'Something of us',
+    style: TextStyle(
+        color: const Color(0xFFFAFAFA),
+        fontSize: 14,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w700,
+        height: 1.50,
+    ),
+)
+// ---
+Text(
+    'Calmness playlist',
+    style: TextStyle(
+        color: const Color(0xFFFAFAFA),
+        fontSize: 14,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w700,
+        height: 1.50,
+    ),
+)
+// ---
+Text(
+    'ride hell',
+    style: TextStyle(
+        color: const Color(0xFFFAFAFA),
+        fontSize: 14,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w700,
+        height: 1.50,
+    ),
+)
+// ---
+Text.rich(
+    TextSpan(
+        children: [
+            TextSpan(
+                text: 'Musi',
+                style: TextStyle(
+                    color: const Color(0xFFEAEAEA),
+                    fontSize: 16,
+                    fontFamily: 'Oxygen',
+                    fontWeight: FontWeight.w700,
+                    height: 1.50,
+                ),
+            ),
+            TextSpan(
+                text: 'fy',
+                style: TextStyle(
+                    color: const Color(0xFF22C3B1),
+                    fontSize: 16,
+                    fontFamily: 'Oxygen',
+                    fontWeight: FontWeight.w700,
+                    height: 1.50,
+                ),
+            ),
+        ],
+    ),
+    textAlign: TextAlign.center,
+)
+// ---
+Text(
+    'home',
+    style: TextStyle(
+        color: const Color(0xFF34D1BF),
+        fontSize: 12,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w400,
+    ),
+)
+// ---
+Text(
+    'search',
+    style: TextStyle(
+        color: const Color(0xFFFAFAFA),
+        fontSize: 12,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w400,
+    ),
+)
+// ---
+Text(
+    'favorite',
+    style: TextStyle(
+        color: const Color(0xFFFAFAFA),
+        fontSize: 12,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w400,
+    ),
+)
+// ---
+Text(
+    'profile',
+    style: TextStyle(
+        color: const Color(0xFFFAFAFA),
+        fontSize: 12,
+        fontFamily: 'Oxygen',
+        fontWeight: FontWeight.w400,
+    ),
+)
