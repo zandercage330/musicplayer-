@@ -1,5 +1,7 @@
 # Musify
 
+![status](https://img.shields.io/badge/status-active-brightgreen)
+
 Musify is a modern, open-source Flutter music player app. It features a beautiful UI, customizable themes, local music library management, and smooth audio playback. 
 
 ## Features
