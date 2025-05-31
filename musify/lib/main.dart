@@ -1,3 +1,6 @@
+// main.dart - Entry point for the Musify Flutter application.
+// Sets up providers, permissions, and launches the app UI.
+
 import 'package:flutter/material.dart';
 import 'package:musify/providers/music_library_provider.dart';
 import 'package:musify/providers/notification_provider.dart';
